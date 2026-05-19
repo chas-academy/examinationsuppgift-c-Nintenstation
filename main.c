@@ -27,11 +27,11 @@ int main(){
     
 
     //Use for-loop, Assign input integer value to every row and its respective columns
+    //Slight error-handling using while-loop, prevents integer input >10
     for(int x = 0; x < 5; x++){
         for(int y = 0; y < 13; y++){
             scanf("%d", &scores[x][y]);
             while(scores[x][y] > 10){
-                printf("Write numbers between 0 och 10.\n");
                 scanf("%d", &scores[x][y]);
             }
         }
@@ -58,7 +58,7 @@ int main(){
     }
 
     //Print out averages
-    printf("-Average points-\n");
+    printf("\n");
     for(int i = 0; i < 5; i++){
         printf("%s ", name[i]);
         printf("%d\n", average[i]);
@@ -76,12 +76,11 @@ int main(){
         total_average += average[i];
     }
     total_average /= 5;
-    printf("\nTotal average: %d", total_average);
 
     //Identify whose average points is below total average
     for(int i = 0; i < 5; i++){
         if(total_average > average[i]){
-            printf("\nBelow average: %s", name[i]);
+            printf("\n%s", name[i]);
         }
     }
 
