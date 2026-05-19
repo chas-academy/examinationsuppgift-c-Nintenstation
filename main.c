@@ -67,7 +67,7 @@ int main(){
     for(int i = 0, j = 1; i < 5; i++, j++){
         if(average[i] < average[j]){
             i = j;
-            printf("Biggest average: %s", name[i]);
+            printf("%s", name[i]);
         }
     }
     //Count the total average of all points
